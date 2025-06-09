@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>T&F Consultancy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #ffffff;
@@ -56,6 +57,21 @@
       background-color: #004080;
     }
 
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #00274d;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #004080;
+    }
+
     footer {
       margin-top: 50px;
       font-size: 14px;
@@ -65,14 +81,21 @@
 </head>
 <body>
 
- <img src="logo.png.png" alt="T&F Consultancy Logo" style="max-width: 200px;">
+  <img src="logo.png.png" alt="T&F Consultancy Logo">
   <h1>Coming Soon</h1>
 
-  <form action="https://formspree.io/f/your-form-id" method="POST">
+  <div class="social-icons">
+    <p style="margin-bottom: 5px;">Follow us:</p>
+    <a href="https://www.facebook.com/tfconsultancyservices" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/tfconsultancy" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <!-- Contact Form UI Only -->
+  <form>
     <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="4" placeholder="Your Message or Enquiry"></textarea>
-    <button type="submit">Send Enquiry</button>
+    <button type="submit" onclick="event.preventDefault(); alert('Form submission not yet connected.');">Send Enquiry</button>
   </form>
 
   <footer>
